@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RequestManager.Controllers
 {
@@ -25,9 +23,8 @@ namespace RequestManager.Controllers
             Request requestToAdd = new Request(id, title, description, createdOn, updatedOn, status, priority);
             _requests.Add(requestToAdd);
         }
-        
         /// <summary>
-        /// Recupere une Request qui a un Id spécifique
+        /// /// Recupere une Request qui a un Id spécifique
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -50,11 +47,11 @@ namespace RequestManager.Controllers
         /// </summary>
         /// <param name="status"></param>
         /// <returns></returns>
-        public Request GetByStatusOrderByPriority(Status status)
+        public List<string> GetByStatusOrderByPriority(Status status)//le test à la ligne 126 dois return une liste de Brand? 
         {
-            Request returnRequest = new Request();
+            List<string> returnListOfBrand = new List<string>();
 
-            return returnRequest;
+            return returnListOfBrand;
         }
         /// <summary>
         /// Update une Request spécifique dans la liste de requests
